@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>普通对话框</title>
+		<link rel="stylesheet" href="css/ui-dialog.css">
+	</head>
+
+	<body>
+		<button onclick="xx();">运行</button>
+		<script src="js/jquery-1.10.2.js"></script>
+		<script src="js/dialog-min.js"></script>
+		<script>
+			function xx() {
+				var d = dialog({
+					title: '欢迎',
+					content: '欢迎使用 artDialog 对话框组件！'
+				});
+				d.show();
+			}
+		</script>
+	</body>
+</html>

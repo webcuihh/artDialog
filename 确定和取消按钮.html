@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>确定和取消按钮</title>
+		<link rel="stylesheet" href="css/ui-dialog.css">
+	</head>
+
+	<body>
+		<button onclick="xx();">运行</button>
+		<script src="js/jquery-1.10.2.js"></script>
+		<script src="js/dialog-min.js"></script>
+		<script>
+			function xx() {
+				var d = dialog({
+					title: '提示',
+					content: '按钮回调函数返回 false 则不许关闭',
+					okValue: '确定',
+					ok: function() {
+						this.title('提交中…');
+						return false;
+					},
+					cancelValue: '取消',
+					cancel: function() {}
+				});
+				d.show();
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>气泡浮层</title>
+		<link rel="stylesheet" href="css/ui-dialog.css">
+	</head>
+
+	<body>
+		<button onclick="xx();">运行</button>
+		<script src="js/jquery-1.10.2.js"></script>
+		<script src="js/dialog-min.js"></script>
+		<script>
+			function xx() {
+				var d = dialog({
+					content: 'Hello World!',
+					quickClose: true // 点击空白处快速关闭
+				});
+				d.show(document.getElementById('quickref-bubble'));
+			}
+		</script>
+	</body>
+
+</html>

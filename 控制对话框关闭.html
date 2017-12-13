@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>控制对话框关闭</title>
+		<link rel="stylesheet" href="css/ui-dialog.css">
+	</head>
+
+	<body>
+		<button onclick="xx();">运行</button>
+		<script src="js/jquery-1.10.2.js"></script>
+		<script src="js/dialog-min.js"></script>
+		<script>
+			function xx() {
+				var d = dialog({
+					content: '对话框将在两秒内关闭'
+				});
+				d.show();
+				setTimeout(function() {
+					d.close().remove();
+				}, 2000);
+			}
+		</script>
+	</body>
+
+</html>
